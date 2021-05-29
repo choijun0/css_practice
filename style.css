@@ -4,11 +4,10 @@ body{
 .grid{
   display: grid;
   gap: 10px;
-  height: 250vh;
-  /* -- grid-template-rows: repeat(4, 100px); -- */
-  grid-template-columns: repeat(4, 100px);
-  grid-auto-rows: 100px; /*it is working on when the number of grid elements is overflow grid's cell count or when grid-template-rows/columns aren't declared.*/
-  /*But you need to declare either grid template columns/rows */
+  height: 50vh;
+  grid-template-columns: repeat(7, 100px);
+  grid-auto-flow: rows;   /*grid를 overflow할 경우에 grid-auto-flow의 value가 columns일경우 column을 더 추가하는 방식으로 overflow를 처리한다. defalut = rows*/
+  grid-auto-columns: 100px
 } 
 .header{  
   background-color: red;
