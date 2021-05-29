@@ -6,7 +6,7 @@ body{
   gap: 10px;
   height: 50vh;
   grid-template-columns: repeat(7, 100px);
-  grid-auto-flow: rows;   /*grid를 overflow할 경우에 grid-auto-flow의 value가 columns일경우 column을 더 추가하는 방식으로 overflow를 처리한다. defalut = rows*/
+  grid-auto-flow: row;   /*grid를 overflow할 경우에 grid-auto-flow의 value가 column일경우 column을 더 추가하는 방식으로 overflow를 처리한다. defalut = row*/
   grid-auto-columns: 100px
 } 
 .header{  
