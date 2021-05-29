@@ -3,32 +3,35 @@ body{
 
 .grid{
   display: grid;
+  background-color: black;
   gap: 10px;
-  height: 50vh;
+  height: 250vh;
+  /*grid's width is 100% width*/
   grid-template-rows: repeat(4, 100px);
   grid-template-columns: repeat(4, 100px);
-  justify-items: center; /* Placing items in Horizontal*/
-  align-items: center; /* Placing items in Vertical*/
-  /*ShortCut*/
-  place-items: end center; /*Vertical Horizontal*/  
+  /*tems attributes mean grid's elements. content attributes mean grid itself.*/
+  /*justify-items, align-items default value is stretch so items full it's allocated space*/
+  justify-items: stretch; /* Placing items in Horizontal*/
+  align-items: stretch; /* Placing items in Vertical*/
+
+  /*shortcut*/
+  place-items: stretch stretch;
+
+  justify-content: space-between; /* Placing grid in Horizontal*/
+  align-content: space-between; /* Placing grid in Vertical*/
+
+  /*shortcut*/
+  place-content: end center;
 } 
 .header{  
-  width: 40px;
-  height: 40px;
   background-color: purple;
 }
 .content{
-  width: 40px;
-  height: 40px;
   background-color: blue;
 }
 .nav{
-  width: 40px;
-  height: 40px;
 background-color: green;
 }
 .footer{
-  width: 40px;
-  height: 40px;
   background-color: orange;
 }
