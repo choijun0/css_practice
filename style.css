@@ -5,9 +5,9 @@ body{
   display: grid;
   gap: 10px;
   height: 50vh;
-  grid-template-columns: repeat(7, 100px);
-  grid-auto-flow: row;   /*grid를 overflow할 경우에 grid-auto-flow의 value가 column일경우 column을 더 추가하는 방식으로 overflow를 처리한다. defalut = row*/
-  grid-auto-columns: 100px
+  grid-template-rows: repeat(4, 100px);
+  grid-auto-columns: 100px;
+  grid-template-columns: repeat(8, minmax(100px, 1fr));
 } 
 .header{  
   background-color: red;
