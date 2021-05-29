@@ -3,35 +3,27 @@ body{
 
 .grid{
   display: grid;
-  background-color: black;
   gap: 10px;
   height: 250vh;
-  /*grid's width is 100% width*/
-  grid-template-rows: repeat(4, 100px);
+  /* -- grid-template-rows: repeat(4, 100px); -- */
   grid-template-columns: repeat(4, 100px);
-  /*tems attributes mean grid's elements. content attributes mean grid itself.*/
-  /*justify-items, align-items default value is stretch so items full it's allocated space*/
-  justify-items: stretch; /* Placing items in Horizontal*/
-  align-items: stretch; /* Placing items in Vertical*/
-
-  /*shortcut*/
-  place-items: stretch stretch;
-
-  justify-content: space-between; /* Placing grid in Horizontal*/
-  align-content: space-between; /* Placing grid in Vertical*/
-
-  /*shortcut*/
-  place-content: end center;
+  grid-auto-rows: 100px; /*it is working on when the number of grid elements is overflow grid's cell count or when grid-template-rows/columns aren't declared.*/
+  /*But you need to declare either grid template columns/rows */
 } 
 .header{  
-  background-color: purple;
+  background-color: red;
+  color: white;
 }
 .content{
-  background-color: blue;
+  background-color: rgb(105, 105, 173);
+  color: white;
 }
-.nav{
-background-color: green;
+.item{
+  color: red;
 }
-.footer{
-  background-color: orange;
+.item:nth-child(odd){ /*solo*/
+background-color: greenyellow;
+}
+.item:nth-child(even){ /*couple*/
+background-color: blue;
 }
