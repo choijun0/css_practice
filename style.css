@@ -5,7 +5,13 @@
   display: grid;
   gap: 10px;
   height: 50vh;
-  grid-template-rows: repeat(4, 100px);
+  /*min-content는 content가 나타날수 있는 최소한의 width를 의미?? */
+  /*max-content는 content가 나타날수 있는 최대한의 width를 의미?? */
+  /*rows에서 사용시 error emerged*/
+  /*row 수를 고정시키면 min-content 이하로 브라우저 크기가 줄경우 스크롤이 생긴다.*/
+  /*auto-fit, auto-fill의 경우는 elements를 내려버림*/
+  grid-template-columns: repeat(7, minmax(min-content, 100px)); 
+  grid-auto-rows: 100px;
 } 
 .header{  
   background-color: red;
@@ -24,15 +30,5 @@
 background-color: greenyellow;
 }
 .item:nth-child(even){ /*couple*/
-background-color: blue;
-}
-
-/*auto-fill/fit 은 repeat함수 내에서만 유효하다*/
-.grid:first-child{
-  /*auto-fill은 할당된 공간을 나누어 가능한 많은 grid공간을 확보한다.*/
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-}
-.grid:last-child{
-  /*auto-fit은 주어진element 를 가능한 만큼 늘여서 공간을 채운다.*/
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+background-color:  aqua;
 }
