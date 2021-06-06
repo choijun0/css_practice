@@ -1,13 +1,22 @@
 @import "_variables";
 @import "_mixins";
 @import "_buttons";
-
 a{
-	@extend %button;
-	text-decoration: none;
-}
-
-button{
-	@extend %button;
-	border: none;
+	@include responsive('A'){
+		/*attributes written this space mean @content in matched function(this case responsive mixin) when it calls mixin.*/
+		color: red;
+		font-size: 100px
+	}
+	@include responsive('B'){
+		color:blue;
+		font-size: 150px
+	}
+		@include responsive('C'){
+		color: green;
+		font-size: 200px
+	}
+		@include responsive('D'){
+		color: peru;
+		font-size: 250px
+	}
 }
