@@ -1,0 +1,19 @@
+@import "_variables";
+
+h2{
+	color: $bg;
+}
+
+.box {
+	color: blue;
+	/*scss - Nesting*/
+	h2{
+		color:yellow;
+	}
+	button{
+		color: violet;
+	}
+	&:hover{
+		background-color: green
+	}
+}
