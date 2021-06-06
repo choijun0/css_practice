@@ -1,1 +1,1 @@
-@charset "UTF-8";h2{color:red}a{display:block;margin-bottom:12px}a:nth-child(odd){color:red}a:nth-child(even){color:#00f}
+@charset "UTF-8";a,button{font-family:inherit;border-radius:7px;font-size:12px;text-transform:uppercase;padding:5px 10px;background-color:peru;color:#fff;font-weight:500}a{text-decoration:none}button{border:0}

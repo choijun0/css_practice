@@ -1,18 +1,13 @@
 @import "_variables";
 @import "_mixins";
+@import "_buttons";
 
-h2{
-	color: $bg;
+a{
+	@extend %button;
+	text-decoration: none;
 }
 
-/*& means itself in scss*/
-a{
-	display: block;
-	margin-bottom: 12px;
-	&:nth-child(odd){  /*odd = couple*/
-		@include SetColor1(red);
-	}
-	&:nth-child(even){
-		@include SetColor2('even');
-	}
+button{
+	@extend %button;
+	border: none;
 }
