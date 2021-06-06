@@ -1,0 +1,11 @@
+@mixin SetColor1($color){
+	color : $color;
+}
+@mixin SetColor2($word){
+	@if $word =='odd'{
+		color : red;
+	}
+	@else {
+		color: blue;
+	}
+}

@@ -1,19 +1,18 @@
 @import "_variables";
+@import "_mixins";
 
 h2{
 	color: $bg;
 }
 
-.box {
-	color: blue;
-	/*scss - Nesting*/
-	h2{
-		color:yellow;
+/*& means itself in scss*/
+a{
+	display: block;
+	margin-bottom: 12px;
+	&:nth-child(odd){  /*odd = couple*/
+		@include SetColor1(red);
 	}
-	button{
-		color: violet;
-	}
-	&:hover{
-		background-color: green
+	&:nth-child(even){
+		@include SetColor2('even');
 	}
 }
